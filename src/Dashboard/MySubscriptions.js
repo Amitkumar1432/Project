@@ -1,9 +1,30 @@
 import { NavLink } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import ContactusBanner from "../Banner/ContactusBanner";
-function Contactus() {
+function MySubscriptions() {
   return (
     <div>
+      <link rel="shortcut icon" href="assets/images/favicon.ico" />
+      {/* Google Font */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap"
+      />
+      {/* Plugins CSS */}
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/vendor/font-awesome/css/all.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      />
+      <link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css" />
+      {/* Theme CSS */}
+      <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+      {/* Header START */}
       <header className="navbar-light navbar-sticky">
         {/* Logo Nav START */}
         <nav className="navbar navbar-expand-xl">
@@ -44,116 +65,105 @@ function Contactus() {
               <ul className="navbar-nav navbar-nav-scroll mx-auto">
                 {/* Nav item 1 Demos */}
                 <li className="nav-item dropdown">
-                  <NavLink
-                    to="/"
-                    className="nav-link"
+                  <a
+                    className="nav-link dropdown-toggle"
                     href="#"
                     id="demoMenu"
                     data-bs-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Home
-                  </NavLink>
-                  {/* <ul className="dropdown-menu" aria-labelledby="demoMenu">
+                    Demos
+                  </a>
+                  <ul className="dropdown-menu" aria-labelledby="demoMenu">
                     <li>
                       {" "}
-                      <a className="dropdown-item" href="index.html">
+                      <NavLink to="/HomeDefault" className="dropdown-item">
                         Home Default
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-2.html">
+                      <NavLink to="/HomeEducation" className="dropdown-item">
                         Home Education
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-3.html">
+                      <NavLink to="/HomeAcademy" className="dropdown-item">
                         Home Academy
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-4.html">
+                      <NavLink to="/HomeCourse" className="dropdown-item">
                         Home Course
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-5.html">
+                      <NavLink to="/HomeUniversity" className="dropdown-item">
                         Home University
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-6.html">
+                      <NavLink to="/HomeKindergarten" className="dropdown-item">
                         Home Kindergarten
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-7.html">
+                      <NavLink to="/HomeLanding" className="dropdown-item">
                         Home Landing
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-8.html">
+                      <NavLink to="/HomeTutor" className="dropdown-item">
                         Home Tutor
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-9.html">
+                      <NavLink to="/HomeSchool" className="dropdown-item">
                         Home School
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-10.html">
+                      <NavLink to="/HomeAbroad" className="dropdown-item">
                         Home Abroad
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-11.html">
+                      <NavLink to="/HomeWorkshop" className="dropdown-item">
                         Home Workshop
-                      </a>
+                      </NavLink>
                     </li>
-                  </ul> */}
+                  </ul>
                 </li>
                 {/* Nav item 2 Pages */}
-                <li className="nav-item">
+                <li className="nav-item dropdown">
                   <a
-                    className="nav-link "
+                    className="nav-link dropdown-toggle"
                     href="#"
                     id="pagesMenu"
                     data-bs-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    Course
+                    Pages
                   </a>
                   <ul className="dropdown-menu" aria-labelledby="pagesMenu">
                     {/* Dropdown submenu */}
                     <li className="dropdown-submenu dropend">
-                      {/* <a className="dropdown-item dropdown-toggle" href="#">
+                      <a className="dropdown-item dropdown-toggle" href="#">
                         Course
-                      </a> */}
-                      {/* <ul
+                      </a>
+                      <ul
                         className="dropdown-menu dropdown-menu-start"
                         data-bs-popper="none"
                       >
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/CourseCategories"
                             className="dropdown-item"
-                            href="course-categories.html"
                           >
                             Course Categories
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
@@ -161,18 +171,21 @@ function Contactus() {
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="course-grid.html">
+                          <NavLink
+                            to="/CourseGridClassic"
+                            className="dropdown-item"
+                          >
                             Course Grid Classic
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/CourseGridMinimal"
                             className="dropdown-item"
-                            href="course-grid-2.html"
                           >
                             Course Grid Minimal
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
@@ -180,18 +193,21 @@ function Contactus() {
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="course-list.html">
+                          <NavLink
+                            to="/CourseListClassic"
+                            className="dropdown-item"
+                          >
                             Course List Classic
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/CourseListMinimal"
                             className="dropdown-item"
-                            href="course-list-2.html"
                           >
                             Course List Minimal
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
@@ -199,98 +215,98 @@ function Contactus() {
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/CourseDetailClassic"
                             className="dropdown-item"
-                            href="course-detail.html"
                           >
                             Course Detail Classic
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/CourseDetailMinimal"
                             className="dropdown-item"
-                            href="course-detail-min.html"
                           >
                             Course Detail Minimal
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/CourseDetailAdvance"
                             className="dropdown-item"
-                            href="course-detail-adv.html"
                           >
                             Course Detail Advance
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/CourseDetailModule"
                             className="dropdown-item"
-                            href="course-detail-module.html"
                           >
                             Course Detail Module
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/CourseFullScreenVideo"
                             className="dropdown-item"
-                            href="course-video-player.html"
                           >
                             Course Full Screen Video
-                          </a>
+                          </NavLink>
                         </li>
-                      </ul> */}
+                      </ul>
                     </li>
                     {/* Dropdown submenu */}
-                    {/* <li className="dropdown-submenu dropend"> */}
-                    {/* <a className="dropdown-item " href="#">
+                    <li className="dropdown-submenu dropend">
+                      <a className="dropdown-item dropdown-toggle" href="#">
                         About
-                      </a> */}
-                    {/* <ul
+                      </a>
+                      <ul
                         className="dropdown-menu dropdown-menu-start"
                         data-bs-popper="none"
                       >
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="about.html">
+                          <NavLink to="/AboutUs" className="dropdown-item">
                             About Us
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="contact-us.html">
+                          <NavLink to="/ContactUs" className="dropdown-item">
                             Contact Us
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="blog-grid.html">
+                          <NavLink to="/BlogGrid" className="dropdown-item">
                             Blog Grid
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="blog-masonry.html">
+                          <NavLink to="/BlogMasonry" className="dropdown-item">
                             Blog Masonry
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="blog-detail.html">
+                          <NavLink to="/BlogDetail" className="dropdown-item">
                             Blog Detail
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="pricing.html">
+                          <NavLink to="/Pricing" className="dropdown-item">
                             Pricing
-                          </a>
+                          </NavLink>
                         </li>
-                      </ul> */}
-                    {/* </li> */}
+                      </ul>
+                    </li>
                     {/* Dropdown submenu */}
                     <li className="dropdown-submenu dropend">
                       <a className="dropdown-item dropdown-toggle" href="#">
@@ -326,48 +342,45 @@ function Contactus() {
                     </li>
                     <li>
                       {" "}
-                      <a className="dropdown-item" href="instructor-list.html">
+                      <NavLink to="/InstructorList" className="dropdown-item">
                         Instructor List
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
                       {" "}
-                      <a
-                        className="dropdown-item"
-                        href="instructor-single.html"
-                      >
+                      <NavLink to="/InstructorSingle" className="dropdown-item">
                         Instructor Single
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
                       {" "}
-                      <a
+                      <NavLink
+                        to="/BecomeanInstructor"
                         className="dropdown-item"
-                        href="become-instructor.html"
                       >
                         Become an Instructor
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
                       {" "}
-                      <a className="dropdown-item" href="abroad-single.html">
+                      <NavLink to="/AbroadSingle" className="dropdown-item">
                         Abroad Single
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
                       {" "}
-                      <a className="dropdown-item" href="workshop-detail.html">
+                      <NavLink to="/WorkshopDetail" className="dropdown-item">
                         Workshop Detail
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
                       {" "}
-                      <a className="dropdown-item" href="event-detail.html">
+                      <NavLink to="/EventDetail" className="dropdown-item">
                         Event Detail{" "}
                         <span className="badge bg-success ms-2 smaller">
                           New
                         </span>
-                      </a>
+                      </NavLink>
                     </li>
                     {/* Dropdown submenu */}
                     <li className="dropdown-submenu dropend">
@@ -380,42 +393,42 @@ function Contactus() {
                       >
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="shop.html">
+                          <NavLink to="/ShopGrid" className="dropdown-item">
                             Shop grid
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/ProductDetail"
                             className="dropdown-item"
-                            href="shop-product-detail.html"
                           >
                             Product detail
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="cart.html">
+                          <NavLink to="/Cart" className="dropdown-item">
                             Cart
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="checkout.html">
+                          <NavLink to="/Checkout" className="dropdown-item">
                             Checkout
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="empty-cart.html">
+                          <NavLink to="/EmptyCart" className="dropdown-item">
                             Empty Cart
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="wishlist.html">
+                          <NavLink to="/Wishlist" className="dropdown-item">
                             Wishlist
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </li>
@@ -430,24 +443,24 @@ function Contactus() {
                       >
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="help-center.html">
+                          <NavLink to="/HelpCenter" className="dropdown-item">
                             Help Center
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/HelpCenterSingle"
                             className="dropdown-item"
-                            href="help-center-detail.html"
                           >
                             Help Center Single
-                          </a>
+                          </NavLink>
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="faq.html">
+                          <NavLink to="/FAQs" className="dropdown-item">
                             FAQs
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </li>
@@ -550,19 +563,19 @@ function Contactus() {
                   </ul>
                 </li>
                 {/* Nav item 3 Account */}
-                <li className="nav-item">
-                  <NavLink
-                    to="/Aboutus"
-                    className="nav-link"
+                <li className="nav-item dropdown">
+                  <a
+                    className="nav-link dropdown-toggle"
                     href="#"
                     id="accounntMenu"
                     data-bs-toggle="dropdown"
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    About
-                  </NavLink>
+                    Accounts
+                  </a>
                   <ul className="dropdown-menu" aria-labelledby="accounntMenu">
+                    {/* Dropdown submenu */}
                     <li className="dropdown-submenu dropend">
                       <a className="dropdown-item dropdown-toggle" href="#">
                         <i className="fas fa-user-tie fa-fw me-1" />
@@ -573,105 +586,72 @@ function Contactus() {
                         data-bs-popper="none"
                       >
                         <li>
-                          {" "}
-                          <a
-                            className="dropdown-item"
-                            href="instructor-dashboard.html"
-                          >
+                          <NavLink to="/Dashboard" className="dropdown-item">
                             <i className="bi bi-grid-fill fa-fw me-1" />
                             Dashboard
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a
-                            className="dropdown-item"
-                            href="instructor-manage-course.html"
-                          >
+                          <NavLink to="/Courses" className="dropdown-item">
                             <i className="bi bi-basket-fill fa-fw me-1" />
                             Courses
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a
-                            className="dropdown-item"
-                            href="instructor-create-course.html"
-                          >
+                          <NavLink to="/CreateCourse" className="dropdown-item">
                             <i className="bi bi-file-earmark-plus-fill fa-fw me-1" />
                             Create Course
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a className="dropdown-item" href="course-added.html">
+                          <NavLink to="/CourseAdded" className="dropdown-item">
                             <i className="bi bi-file-check-fill fa-fw me-1" />
                             Course Added
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a
-                            className="dropdown-item"
-                            href="instructor-quiz.html"
-                          >
+                          <NavLink to="/Quiz" className="dropdown-item">
                             <i className="bi bi-question-diamond fa-fw me-1" />
                             Quiz
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a
-                            className="dropdown-item"
-                            href="instructor-earning.html"
-                          >
+                          <NavLink to="/Earnings" className="dropdown-item">
                             <i className="fas fa-chart-line fa-fw me-1" />
                             Earnings
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a
-                            className="dropdown-item"
-                            href="instructor-studentlist.html"
-                          >
+                          <NavLink to="/Students" className="dropdown-item">
                             <i className="fas fa-user-graduate fa-fw me-1" />
                             Students
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a
-                            className="dropdown-item"
-                            href="instructor-order.html"
-                          >
+                          <NavLink to="/Orders" className="dropdown-item">
                             <i className="bi bi-cart-check-fill fa-fw me-1" />
                             Orders
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a
-                            className="dropdown-item"
-                            href="instructor-review.html"
-                          >
+                          <NavLink to="/Reviews" className="dropdown-item">
                             <i className="bi bi-star-fill fa-fw me-1" />
                             Reviews
-                          </a>{" "}
+                          </NavLink>
                         </li>
                         <li>
-                          {" "}
-                          <a
+                          <NavLink
+                            to="/Payout"
                             className="dropdown-item"
                             href="instructor-payout.html"
                           >
                             <i className="fas fa-wallet fa-fw me-1" />
                             Payout
-                          </a>
+                          </NavLink>
                         </li>
                       </ul>
                     </li>
-
+                    {/* Dropdown submenu */}
                     <li className="dropdown-submenu dropend">
                       <a className="dropdown-item dropdown-toggle" href="#">
                         <i className="fas fa-user-graduate fa-fw me-1" />
@@ -683,79 +663,74 @@ function Contactus() {
                       >
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/StudentDashboard"
                             className="dropdown-item"
-                            href="student-dashboard.html"
                           >
                             <i className="bi bi-grid-fill fa-fw me-1" />
                             Dashboard
-                          </a>{" "}
+                          </NavLink>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/MySubscriptions"
                             className="dropdown-item"
-                            href="student-subscription.html"
                           >
                             <i className="bi bi-card-checklist fa-fw me-1" />
                             My Subscriptions
-                          </a>{" "}
+                          </NavLink>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a
-                            className="dropdown-item"
-                            href="student-course-list.html"
-                          >
+                          <NavLink to="/Course" className="dropdown-item">
                             <i className="bi bi-basket-fill fa-fw me-1" />
-                            Courses
-                          </a>{" "}
+                            Course
+                          </NavLink>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a
-                            className="dropdown-item"
-                            href="student-course-resume.html"
-                          >
+                          <NavLink to="/CourseResume" className="dropdown-item">
                             <i className="far fa-fw fa-file-alt me-1" />
                             Course Resume
-                          </a>{" "}
+                          </NavLink>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a className="dropdown-item" href="student-quiz.html">
+                          <NavLink to="/StudentQuiz" className="dropdown-item">
                             <i className="bi bi-question-diamond fa-fw me-1" />
                             Quiz{" "}
-                          </a>{" "}
+                          </NavLink>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a
-                            className="dropdown-item"
-                            href="student-payment-info.html"
-                          >
+                          <NavLink to="/Paymentinfo" className="dropdown-item">
                             <i className="bi bi-credit-card-2-front-fill fa-fw me-1" />
                             Payment Info
-                          </a>{" "}
+                          </NavLink>{" "}
                         </li>
                         <li>
                           {" "}
-                          <a
+                          <NavLink
+                            to="/StudentWishlist"
                             className="dropdown-item"
-                            href="student-bookmark.html"
                           >
                             <i className="fas bi-cart-check-fill fa-fw me-1" />
                             Wishlist
-                          </a>{" "}
+                          </NavLink>{" "}
                         </li>
                       </ul>
                     </li>
                     <li>
                       {" "}
-                      <a className="dropdown-item" href="admin-dashboard.html">
+                      <NavLink
+                        to="/Admin"
+                        className="dropdown-item"
+                        href="admin-dashboard.html"
+                      >
                         <i className="fas fa-user-cog fa-fw me-1" />
                         Admin
-                      </a>{" "}
+                      </NavLink>{" "}
                     </li>
                     <li>
                       {" "}
@@ -763,33 +738,34 @@ function Contactus() {
                     </li>
                     <li>
                       {" "}
-                      <a
+                      <NavLink
+                        to="/EditProfile"
                         className="dropdown-item"
                         href="instructor-edit-profile.html"
                       >
                         <i className="fas fa-fw fa-edit me-1" />
                         Edit Profile
-                      </a>{" "}
+                      </NavLink>{" "}
                     </li>
                     <li>
                       {" "}
-                      <a
+                      <NavLink to="/Settings"
                         className="dropdown-item"
                         href="instructor-setting.html"
                       >
                         <i className="fas fa-fw fa-cog me-1" />
                         Settings
-                      </a>{" "}
+                      </NavLink>{" "}
                     </li>
                     <li>
                       {" "}
-                      <a
+                      <NavLink to="/DeleteProfile"
                         className="dropdown-item"
                         href="instructor-delete-account.html"
                       >
                         <i className="fas fa-fw fa-trash-alt me-1" />
                         Delete Profile
-                      </a>{" "}
+                      </NavLink>{" "}
                     </li>
                     <li>
                       {" "}
@@ -1121,160 +1097,440 @@ function Contactus() {
       {/* **************** MAIN CONTENT START **************** */}
       <main>
         {/* =======================
-Page Banner START */}
-        <ContactusBanner />
-        {/* =======================
-Page Banner END */}
-        {/* =======================
-Image and contact form START */}
-        <section>
-          <div className="container">
-            <div className="row g-4 g-lg-0 align-items-center">
-              <div className="col-md-6 align-items-center text-center">
-                {/* Image */}
-                <img
-                  src="assets/images/element/contact.svg"
-                  className="h-400px"
-                  alt=""
-                />
-                {/* Social media button */}
-                <div className="d-sm-flex align-items-center justify-content-center mt-2 mt-sm-4">
-                  <h5 className="mb-0">Follow us on:</h5>
-                  <ul className="list-inline mb-0 ms-sm-2">
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-facebook" href="#">
-                        <i className="fab fa-fw fa-facebook-square" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-instagram" href="#">
-                        <i className="fab fa-fw fa-instagram" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-twitter" href="#">
-                        <i className="fab fa-fw fa-twitter" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-linkedin" href="#">
-                        <i className="fab fa-fw fa-linkedin-in" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-dribbble" href="#">
-                        <i className="fas fa-fw fa-basketball-ball" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-pinterest" href="#">
-                        <i className="fab fa-fw fa-pinterest" />
-                      </a>{" "}
-                    </li>
-                  </ul>
+  Page Banner START */}
+        <section className="pt-0">
+          <div className="container-fluid px-0">
+            <div
+              className="card bg-blue h-100px h-md-200px rounded-0"
+              style={{
+                background:
+                  "url(assets/images/pattern/04.png) no-repeat center center",
+                backgroundSize: "cover",
+              }}
+            ></div>
+          </div>
+          <div className="container mt-n4">
+            <div className="row">
+              <div className="col-12">
+                <div className="card bg-transparent card-body pb-0 px-0 mt-2 mt-sm-0">
+                  <div className="row d-sm-flex justify-sm-content-between mt-2 mt-md-0">
+                    {/* Avatar */}
+                    <div className="col-auto">
+                      <div className="avatar avatar-xxl position-relative mt-n3">
+                        <img
+                          className="avatar-img rounded-circle border border-white border-3 shadow"
+                          src="assets/images/avatar/09.jpg"
+                          alt=""
+                        />
+                        <span className="badge text-bg-success rounded-pill position-absolute top-50 start-100 translate-middle mt-4 mt-md-5 ms-n3 px-md-3">
+                          Pro
+                        </span>
+                      </div>
+                    </div>
+                    {/* Profile info */}
+                    <div className="col d-sm-flex justify-content-between align-items-center">
+                      <div>
+                        <h1 className="my-1 fs-4">Lori Stevens</h1>
+                        <ul className="list-inline mb-0">
+                          <li className="list-inline-item me-3 mb-1 mb-sm-0">
+                            <span className="h6">255</span>
+                            <span className="text-body fw-light">points</span>
+                          </li>
+                          <li className="list-inline-item me-3 mb-1 mb-sm-0">
+                            <span className="h6">7</span>
+                            <span className="text-body fw-light">
+                              Completed courses
+                            </span>
+                          </li>
+                          <li className="list-inline-item me-3 mb-1 mb-sm-0">
+                            <span className="h6">52</span>
+                            <span className="text-body fw-light">
+                              Completed lessons
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      {/* Button */}
+                      <div className="mt-2 mt-sm-0">
+                        <a
+                          href="student-course-list.html"
+                          className="btn btn-outline-primary mb-0"
+                        >
+                          View my courses
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                {/* Advanced filter responsive toggler START */}
+                {/* Divider */}
+                <hr className="d-xl-none" />
+                <div className="col-12 col-xl-3 d-flex justify-content-between align-items-center">
+                  <a className="h6 mb-0 fw-bold d-xl-none" href="#">
+                    Menu
+                  </a>
+                  <button
+                    className="btn btn-primary d-xl-none"
+                    type="button"
+                    data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasSidebar"
+                    aria-controls="offcanvasSidebar"
+                  >
+                    <i className="fas fa-sliders-h" />
+                  </button>
+                </div>
+                {/* Advanced filter responsive toggler END */}
               </div>
-              {/* Contact form START */}
-              <div className="col-md-6">
-                {/* Title */}
-                <h2 className="mt-4 mt-md-0">Let's talk</h2>
-                <p>
-                  To request a quote or want to meet up for coffee, contact us
-                  directly or fill out the form and we will get back to you
-                  promptly
-                </p>
-                <form>
-                  {/* Name */}
-                  <div className="mb-4 bg-light-input">
-                    <label htmlFor="yourName" className="form-label">
-                      Your name *
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control form-control-lg"
-                      id="yourName"
-                    />
-                  </div>
-                  {/* Email */}
-                  <div className="mb-4 bg-light-input">
-                    <label htmlFor="emailInput" className="form-label">
-                      Email address *
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control form-control-lg"
-                      id="emailInput"
-                    />
-                  </div>
-                  {/* Message */}
-                  <div className="mb-4 bg-light-input">
-                    <label htmlFor="textareaBox" className="form-label">
-                      Message *
-                    </label>
-                    <textarea
-                      className="form-control"
-                      id="textareaBox"
-                      rows={4}
-                      defaultValue={""}
-                    />
-                  </div>
-                  {/* Button */}
-                  <div className="d-grid">
-                    <button
-                      className="btn btn-lg btn-primary mb-0"
-                      type="button"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-              </div>
-              {/* Contact form END */}
             </div>
           </div>
         </section>
         {/* =======================
-Image and contact form END */}
+  Page Banner END */}
         {/* =======================
-Map START */}
+  Page content START */}
         <section className="pt-0">
           <div className="container">
             <div className="row">
-              <div className="col-12">
-                <iframe
-                  className="w-100 h-400px grayscale rounded"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sin!4v1586000412513!5m2!1sen!2sin"
-                  height={500}
-                  style={{ border: 0 }}
-                  aria-hidden="false"
-                  tabIndex={0}
-                />
+              {/* Left sidebar START */}
+              <div className="col-xl-3">
+                {/* Responsive offcanvas body START */}
+                <div
+                  className="offcanvas-xl offcanvas-end"
+                  tabIndex={-1}
+                  id="offcanvasSidebar"
+                >
+                  {/* Offcanvas header */}
+                  <div className="offcanvas-header bg-light">
+                    <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+                      My profile
+                    </h5>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      data-bs-dismiss="offcanvas"
+                      data-bs-target="#offcanvasSidebar"
+                      aria-label="Close"
+                    />
+                  </div>
+                  {/* Offcanvas body */}
+                  <div className="offcanvas-body p-3 p-xl-0">
+                    <div className="bg-dark border rounded-3 p-3 w-100">
+                      {/* Dashboard menu */}
+                      <div className="list-group list-group-dark list-group-borderless collapse-list">
+                        <a
+                          className="list-group-item"
+                          href="student-dashboard.html"
+                        >
+                          <i className="bi bi-ui-checks-grid fa-fw me-2" />
+                          Dashboard
+                        </a>
+                        <a
+                          className="list-group-item active"
+                          href="student-subscription.html"
+                        >
+                          <i className="bi bi-card-checklist fa-fw me-2" />
+                          My Subscriptions
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="student-course-list.html"
+                        >
+                          <i className="bi bi-basket fa-fw me-2" />
+                          My Courses
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="student-course-resume.html"
+                        >
+                          <i className="far fa-fw fa-file-alt me-2" />
+                          Course Resume
+                        </a>
+                        <a className="list-group-item" href="student-quiz.html">
+                          <i className="bi bi-question-diamond fa-fw me-2" />
+                          Quiz
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="student-payment-info.html"
+                        >
+                          <i className="bi bi-credit-card-2-front fa-fw me-2" />
+                          Payment Info
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="student-bookmark.html"
+                        >
+                          <i className="bi bi-cart-check fa-fw me-2" />
+                          Wishlist
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="instructor-edit-profile.html"
+                        >
+                          <i className="bi bi-pencil-square fa-fw me-2" />
+                          Edit Profile
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="instructor-setting.html"
+                        >
+                          <i className="bi bi-gear fa-fw me-2" />
+                          Settings
+                        </a>
+                        <a
+                          className="list-group-item"
+                          href="instructor-delete-account.html"
+                        >
+                          <i className="bi bi-trash fa-fw me-2" />
+                          Delete Profile
+                        </a>
+                        <a
+                          className="list-group-item text-danger bg-danger-soft-hover"
+                          href="#"
+                        >
+                          <i className="fas fa-sign-out-alt fa-fw me-2" />
+                          Sign Out
+                        </a>
+                        {/* Collapse menu */}
+                        <a
+                          className="list-group-item"
+                          data-bs-toggle="collapse"
+                          href="#collapseauthentication"
+                          role="button"
+                          aria-expanded="false"
+                          aria-controls="collapseauthentication"
+                        >
+                          <i className="bi bi-lock fa-fw me-2" />
+                          Dropdown level
+                        </a>
+                        {/* Submenu */}
+                        <ul
+                          className="nav collapse flex-column"
+                          id="collapseauthentication"
+                          data-bs-parent="#navbar-sidebar"
+                        >
+                          <li className="nav-item">
+                            {" "}
+                            <a className="nav-link" href="#">
+                              Dropdown item
+                            </a>
+                          </li>
+                          <li className="nav-item">
+                            {" "}
+                            <a className="nav-link" href="#">
+                              Dropdown item
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Responsive offcanvas body END */}
               </div>
-            </div>
+              {/* Left sidebar END */}
+              {/* Main content START */}
+              <div className="col-xl-9">
+                <div className="card card-body bg-transparent border rounded-3">
+                  {/* Update plan START */}
+                  <div className="row g-4">
+                    {/* Update plan item */}
+                    <div className="col-6 col-lg-3">
+                      <span>Active Plan</span>
+                      <h4>Basic</h4>
+                    </div>
+                    {/* Update plan item */}
+                    <div className="col-6 col-lg-3">
+                      <span>Monthly limit</span>
+                      <h4>Unlimited</h4>
+                    </div>
+                    {/* Update plan item */}
+                    <div className="col-6 col-lg-3">
+                      <span>Cost</span>
+                      <h4>$99/Month</h4>
+                    </div>
+                    {/* Update plan item */}
+                    <div className="col-6 col-lg-3">
+                      <span>Renewal Date</span>
+                      <h4>Feb 17, 2023</h4>
+                    </div>
+                  </div>
+                  {/* Update plan END */}
+                  {/* Progress bar */}
+                  <div className="overflow-hidden my-4">
+                    <h6 className="mb-0">85%</h6>
+                    <div className="progress progress-sm bg-primary bg-opacity-10">
+                      <div
+                        className="progress-bar bg-primary aos"
+                        role="progressbar"
+                        data-aos="slide-right"
+                        data-aos-delay={200}
+                        data-aos-duration={1000}
+                        data-aos-easing="ease-in-out"
+                        style={{ width: "85%" }}
+                        aria-valuenow={85}
+                        aria-valuemin={0}
+                        aria-valuemax={100}
+                      ></div>
+                    </div>
+                  </div>
+                  {/* Button */}
+                  <div className="d-sm-flex justify-content-sm-between align-items-center">
+                    <div>
+                      {/* Switch Content */}
+                      <div className="d-sm-flex">
+                        <div className="form-check form-switch form-check-md">
+                          <input
+                            className="form-check-input"
+                            type="checkbox"
+                            id="checkPrivacy1"
+                            defaultChecked
+                          />
+                          <label
+                            className="form-check-label"
+                            htmlFor="checkPrivacy1"
+                          >
+                            Auto Renewal
+                          </label>
+                        </div>
+                      </div>
+                      <p className="mb-0 small">
+                        Your plan will automatically renew on: 02/17/2023.
+                        Payment Amount: USD250
+                      </p>
+                    </div>
+                    {/* Buttons */}
+                    <div className="mt-2 mt-sm-0">
+                      <button
+                        type="button"
+                        className="btn btn-sm btn-danger-soft me-2 mb-0"
+                      >
+                        Cancel plan
+                      </button>
+                      <a href="#" className="btn btn-sm btn-success mb-0">
+                        Upgrade plan
+                      </a>
+                    </div>
+                  </div>
+                  {/* Divider */}
+                  <hr />
+                  {/* Plan Benefits */}
+                  <div className="row">
+                    <h6 className="mb-3">The plan includes</h6>
+                    <div className="col-md-6">
+                      <ul className="list-unstyled">
+                        <li className="mb-3 h6 fw-light">
+                          <i className="bi bi-patch-check-fill text-success me-2" />
+                          Up to 05 users monthly
+                        </li>
+                        <li className="mb-3 h6 fw-light">
+                          <i className="bi bi-patch-check-fill text-success me-2" />
+                          Free 5 host &amp; domain
+                        </li>
+                        <li className="mb-3 h6 fw-light">
+                          <i className="bi bi-patch-check-fill text-success me-2" />
+                          Custom infrastructure
+                        </li>
+                        <li className="mb-3 h6 fw-light">
+                          <i className="bi bi-patch-check-fill text-success me-2" />
+                          Access to all our room
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="col-md-6">
+                      <ul className="list-unstyled">
+                        <li className="mb-3 h6 fw-light">
+                          <i className="bi bi-patch-check-fill text-success me-2" />
+                          24/7 dedicated Support
+                        </li>
+                        <li className="mb-3 h6 fw-light">
+                          <i className="bi bi-patch-check-fill text-success me-2" />
+                          Unlimited updates
+                        </li>
+                        <li className="h6 fw-light">
+                          <i className="bi bi-patch-check-fill text-success me-2" />
+                          Landing pages &amp; Web widgets
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* Main content END */}
+            </div>{" "}
+            {/* Row END */}
           </div>
         </section>
         {/* =======================
-Map END */}
+  Page content END */}
       </main>
       {/* **************** MAIN CONTENT END **************** */}
       {/* =======================
-Footer START */}
-      <Footer />
+  Footer START */}
+      <footer className="bg-dark p-3">
+        <div className="container">
+          <div className="row align-items-center">
+            {/* Widget */}
+            <div className="col-md-4 text-center text-md-start mb-3 mb-md-0">
+              {/* Logo START */}
+              <a href="index.html">
+                {" "}
+                <img
+                  className="h-20px"
+                  src="assets/images/logo-light.svg"
+                  alt="logo"
+                />{" "}
+              </a>
+            </div>
+            {/* Widget */}
+            <div className="col-md-4 mb-3 mb-md-0">
+              <div className="text-center text-white">
+                Copyrights ©2023{" "}
+                <a href="#" className="text-reset btn-link">
+                  Eduport
+                </a>
+                . All rights reserved.
+              </div>
+            </div>
+            {/* Widget */}
+            <div className="col-md-4">
+              {/* Rating */}
+              <ul className="list-inline mb-0 text-center text-md-end">
+                <li className="list-inline-item ms-2">
+                  <a href="#">
+                    <i className="text-white fab fa-facebook" />
+                  </a>
+                </li>
+                <li className="list-inline-item ms-2">
+                  <a href="#">
+                    <i className="text-white fab fa-instagram" />
+                  </a>
+                </li>
+                <li className="list-inline-item ms-2">
+                  <a href="#">
+                    <i className="text-white fab fa-linkedin-in" />
+                  </a>
+                </li>
+                <li className="list-inline-item ms-2">
+                  <a href="#">
+                    <i className="text-white fab fa-twitter" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
       {/* =======================
-Footer END */}
+  Footer END */}
       {/* Back to top */}
       <div className="back-top">
         <i className="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle" />
       </div>
       {/* Bootstrap JS */}
+      {/* Vendors */}
       {/* Template Functions */}
     </div>
   );
 }
-export default Contactus;
+export default MySubscriptions;

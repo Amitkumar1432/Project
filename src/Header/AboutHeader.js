@@ -1,7 +1,6 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import ContactusBanner from "../Banner/ContactusBanner";
-function Contactus() {
+function Aboutbanner() {
   return (
     <div>
       <header className="navbar-light navbar-sticky">
@@ -55,79 +54,11 @@ function Contactus() {
                   >
                     Home
                   </NavLink>
-                  {/* <ul className="dropdown-menu" aria-labelledby="demoMenu">
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index.html">
-                        Home Default
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-2.html">
-                        Home Education
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-3.html">
-                        Home Academy
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-4.html">
-                        Home Course
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-5.html">
-                        Home University
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-6.html">
-                        Home Kindergarten
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-7.html">
-                        Home Landing
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-8.html">
-                        Home Tutor
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-9.html">
-                        Home School
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-10.html">
-                        Home Abroad
-                      </a>
-                    </li>
-                    <li>
-                      {" "}
-                      <a className="dropdown-item" href="index-11.html">
-                        Home Workshop
-                      </a>
-                    </li>
-                  </ul> */}
                 </li>
                 {/* Nav item 2 Pages */}
                 <li className="nav-item">
                   <a
-                    className="nav-link "
+                    className="nav-link"
                     href="#"
                     id="pagesMenu"
                     data-bs-toggle="dropdown"
@@ -246,9 +177,15 @@ function Contactus() {
                     </li>
                     {/* Dropdown submenu */}
                     {/* <li className="dropdown-submenu dropend"> */}
-                    {/* <a className="dropdown-item " href="#">
+                    <li className="nav-item">
+                      <NavLink
+                        to="/Aboutus"
+                        className="nav-link"
+                        href="contact-us.html"
+                      >
                         About
-                      </a> */}
+                      </NavLink>
+                    </li>
                     {/* <ul
                         className="dropdown-menu dropdown-menu-start"
                         data-bs-popper="none"
@@ -552,7 +489,7 @@ function Contactus() {
                 {/* Nav item 3 Account */}
                 <li className="nav-item">
                   <NavLink
-                    to="/Aboutus"
+                    to="/Contactus"
                     className="nav-link"
                     href="#"
                     id="accounntMenu"
@@ -560,15 +497,16 @@ function Contactus() {
                     aria-haspopup="true"
                     aria-expanded="false"
                   >
-                    About
+                    Contact
                   </NavLink>
                   <ul className="dropdown-menu" aria-labelledby="accounntMenu">
+                    {/* Dropdown submenu */}
                     <li className="dropdown-submenu dropend">
                       <a className="dropdown-item dropdown-toggle" href="#">
                         <i className="fas fa-user-tie fa-fw me-1" />
                         Instructor
                       </a>
-                      <ul
+                      {/* <ul
                         className="dropdown-menu dropdown-menu-start"
                         data-bs-popper="none"
                       >
@@ -667,11 +605,11 @@ function Contactus() {
                           >
                             <i className="fas fa-wallet fa-fw me-1" />
                             Payout
-                          </a>
+                          </a>{" "}
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
-
+                    {/* Dropdown submenu */}
                     <li className="dropdown-submenu dropend">
                       <a className="dropdown-item dropdown-toggle" href="#">
                         <i className="fas fa-user-graduate fa-fw me-1" />
@@ -1117,164 +1055,8 @@ function Contactus() {
         </nav>
         {/* Logo Nav END */}
       </header>
-      {/* Header END */}
-      {/* **************** MAIN CONTENT START **************** */}
-      <main>
-        {/* =======================
-Page Banner START */}
-        <ContactusBanner />
-        {/* =======================
-Page Banner END */}
-        {/* =======================
-Image and contact form START */}
-        <section>
-          <div className="container">
-            <div className="row g-4 g-lg-0 align-items-center">
-              <div className="col-md-6 align-items-center text-center">
-                {/* Image */}
-                <img
-                  src="assets/images/element/contact.svg"
-                  className="h-400px"
-                  alt=""
-                />
-                {/* Social media button */}
-                <div className="d-sm-flex align-items-center justify-content-center mt-2 mt-sm-4">
-                  <h5 className="mb-0">Follow us on:</h5>
-                  <ul className="list-inline mb-0 ms-sm-2">
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-facebook" href="#">
-                        <i className="fab fa-fw fa-facebook-square" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-instagram" href="#">
-                        <i className="fab fa-fw fa-instagram" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-twitter" href="#">
-                        <i className="fab fa-fw fa-twitter" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-linkedin" href="#">
-                        <i className="fab fa-fw fa-linkedin-in" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-dribbble" href="#">
-                        <i className="fas fa-fw fa-basketball-ball" />
-                      </a>{" "}
-                    </li>
-                    <li className="list-inline-item">
-                      {" "}
-                      <a className="fs-5 me-1 text-pinterest" href="#">
-                        <i className="fab fa-fw fa-pinterest" />
-                      </a>{" "}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              {/* Contact form START */}
-              <div className="col-md-6">
-                {/* Title */}
-                <h2 className="mt-4 mt-md-0">Let's talk</h2>
-                <p>
-                  To request a quote or want to meet up for coffee, contact us
-                  directly or fill out the form and we will get back to you
-                  promptly
-                </p>
-                <form>
-                  {/* Name */}
-                  <div className="mb-4 bg-light-input">
-                    <label htmlFor="yourName" className="form-label">
-                      Your name *
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control form-control-lg"
-                      id="yourName"
-                    />
-                  </div>
-                  {/* Email */}
-                  <div className="mb-4 bg-light-input">
-                    <label htmlFor="emailInput" className="form-label">
-                      Email address *
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control form-control-lg"
-                      id="emailInput"
-                    />
-                  </div>
-                  {/* Message */}
-                  <div className="mb-4 bg-light-input">
-                    <label htmlFor="textareaBox" className="form-label">
-                      Message *
-                    </label>
-                    <textarea
-                      className="form-control"
-                      id="textareaBox"
-                      rows={4}
-                      defaultValue={""}
-                    />
-                  </div>
-                  {/* Button */}
-                  <div className="d-grid">
-                    <button
-                      className="btn btn-lg btn-primary mb-0"
-                      type="button"
-                    >
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-              </div>
-              {/* Contact form END */}
-            </div>
-          </div>
-        </section>
-        {/* =======================
-Image and contact form END */}
-        {/* =======================
-Map START */}
-        <section className="pt-0">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <iframe
-                  className="w-100 h-400px grayscale rounded"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343008!2d-74.00425878428698!3d40.74076684379132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259bf5c1654f3%3A0xc80f9cfce5383d5d!2sGoogle!5e0!3m2!1sen!2sin!4v1586000412513!5m2!1sen!2sin"
-                  height={500}
-                  style={{ border: 0 }}
-                  aria-hidden="false"
-                  tabIndex={0}
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-        {/* =======================
-Map END */}
-      </main>
-      {/* **************** MAIN CONTENT END **************** */}
-      {/* =======================
-Footer START */}
-      <Footer />
-      {/* =======================
-Footer END */}
-      {/* Back to top */}
-      <div className="back-top">
-        <i className="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle" />
-      </div>
-      {/* Bootstrap JS */}
-      {/* Template Functions */}
     </div>
   );
 }
-export default Contactus;
+
+export default Aboutbanner;
